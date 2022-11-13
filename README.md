@@ -31,12 +31,12 @@ chmod +x $HOME/.briefcase-utils/setup.sh && $HOME/.briefcase-utils/setup.sh
 
 ## Usage
 
-To use version control with your dotfiles use the 'briefcase' command alias inside the home directory, like so:
+To use version control with your dotfiles use the 'cfg' command alias inside the home directory, like so:
 
 ```console
-briefcase add ~/.config/nvim/
-briefcase commit
-briefcase push origin main
+cfg add ~/.config/nvim/
+cfg commit
+cfg push origin main
 ```
 
 This alias appends required flags to 'git' command, so that it can work with the bare repository.
