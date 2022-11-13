@@ -10,3 +10,6 @@
 [submodule ".config/nvim/pack/jiangmiao/start/auto-pairs"]
 	path = .config/nvim/pack/jiangmiao/start/auto-pairs
 	url = git@github.com:jiangmiao/auto-pairs
+[submodule ".config/nvim/pack/kabbamine/start/vcoolor.vim"]
+	path = .config/nvim/pack/kabbamine/start/vcoolor.vim
+	url = git@github.com:kabbamine/vcoolor.vim
