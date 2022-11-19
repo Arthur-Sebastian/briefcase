@@ -55,7 +55,5 @@ if [ -f ~/.bash_aliases ]; then
 	. ~/.bash_aliases
 fi
 
-export EDITOR="nvim"
-export VISUAL="nvim"
-
-alias cfg="git --git-dir=/home/artur/.briefcase --work-tree=/home/artur"
+export EDITOR="vim"
+export VISUAL="vim"
