@@ -13,3 +13,18 @@
 [submodule ".config/nvim/pack/kabbamine/start/vcoolor.vim"]
 	path = .config/nvim/pack/kabbamine/start/vcoolor.vim
 	url = git@github.com:kabbamine/vcoolor.vim
+[submodule ".vim/pack/airblade/start/vim-gitgutter"]
+	path = .vim/pack/airblade/start/vim-gitgutter
+	url = git@github.com:airblade/vim-gitgutter
+[submodule ".vim/pack/vim-airline/start/vim-airline"]
+	path = .vim/pack/vim-airline/start/vim-airline
+	url = git@github.com:vim-airline/vim-airline
+[submodule ".vim/pack/tpope/start/vim-fugitive"]
+	path = .vim/pack/tpope/start/vim-fugitive
+	url = git@github.com:tpope/vim-fugitive
+[submodule ".vim/pack/kabbamine/start/vcoolor.vim"]
+	path = .vim/pack/kabbamine/start/vcoolor.vim
+	url = git@github.com:kabbamine/vcoolor.vim
+[submodule ".vim/pack/jiangmiao/start/auto-pairs"]
+	path = .vim/pack/jiangmiao/start/auto-pairs
+	url = git@github.com:jiangmiao/auto-pairs
