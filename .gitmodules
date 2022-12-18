@@ -13,3 +13,7 @@
 [submodule ".vim/pack/jiangmiao/start/auto-pairs"]
 	path = .vim/pack/jiangmiao/start/auto-pairs
 	url = git@github.com:jiangmiao/auto-pairs
+[submodule ".vim/pack/neoclide/start/coc.nvim"]
+	path = .vim/pack/neoclide/start/coc.nvim
+	url = git@github.com:neoclide/coc.nvim
+	branch = release

@@ -1,24 +1,34 @@
 " Ctrl + <Left/Right>
-			" - quickly switch buffers
-nnoremap <C-Left> :bp<CR>
-nnoremap <C-Right> :bn<CR>
+" - quickly switch buffers
+nnoremap <silent><C-Left> :bp<CR>
+nnoremap <silent><C-Right> :bn<CR>
 " Alt + <Up/Down>
-			" - move line up or down
-inoremap <M-Up> <Esc>:m-2<CR>==gi
-inoremap <M-Down> <Esc>:m+<CR>==gi
+" - move line up or down
+inoremap <silent><M-Up> <Esc>:m-2<CR>==gi
+inoremap <silent><M-Down> <Esc>:m+<CR>==gi
 " Alt + <Left/Right>
-			" - change line indent
-inoremap <M-Left> <Esc><<gi
-inoremap <M-Right> <Esc>>>gi
+" - change line indent
+inoremap <silent><M-Left> <Esc><<gi
+inoremap <silent><M-Right> <Esc>>>gi
 " vim-gitgutter 
-			" - hunk bindings
-nnoremap ;b :GitGutterPrevHunk<CR>
-nnoremap ;n :GitGutterNextHunk<CR>
+" - hunk bindings
+nnoremap ;<Up> :GitGutterPrevHunk<CR>
+nnoremap ;<Down> :GitGutterNextHunk<CR>
 nnoremap ;v :GitGutterPreviewHunk<CR>
 nnoremap ;u :GitGutterUndoHunk<CR>
 nnoremap ;s :GitGutterStageHunk<CR>
+" coc.nvim
+" - confirm completion
+inoremap <expr> <TAB>
+	\ coc#pum#visible() ? coc#pum#confirm() :
+	\ "\<Tab>"
+" - show hover
+nnoremap <TAB> :call CocActionAsync('doHover')<CR>
+" - jump to defintion and back
+nnoremap ;<Right> :call CocActionAsync('jumpDefinition')<CR>
+nnoremap ;<Left> <C-o>
 
-set updatetime=500
+set updatetime=300
 
 set wildmenu
 set completeopt=noinsert,menuone,noselect
