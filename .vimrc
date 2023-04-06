@@ -27,6 +27,7 @@ nnoremap <TAB> :call CocActionAsync('doHover')<CR>
 " - jump to defintion and back
 nnoremap ;<Right> :call CocActionAsync('jumpDefinition')<CR>
 nnoremap ;<Left> <C-o>
+autocmd BufWritePost * :call CocAction('runCommand', 'prettier.formatFile')
 
 set updatetime=300
 
