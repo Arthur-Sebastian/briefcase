@@ -27,7 +27,10 @@ nnoremap <TAB> :call CocActionAsync('doHover')<CR>
 " - jump to defintion and back
 nnoremap ;<Right> :call CocActionAsync('jumpDefinition')<CR>
 nnoremap ;<Left> <C-o>
-autocmd BufWritePost * :call CocAction('runCommand', 'prettier.formatFile')
+" - auto format file with prettier
+autocmd BufWritePre * :call CocAction('runCommand', 'prettier.formatFile')
+" - quick symbol rename
+nnoremap <F2> :call CocActionAsync('rename')<CR>
 
 set updatetime=300
 
