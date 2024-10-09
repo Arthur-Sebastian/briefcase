@@ -50,10 +50,16 @@ fi
 #enable GCC color warnings
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-#load aliases file
-if [ -f ~/.bash_aliases ]; then
-	. ~/.bash_aliases
-fi
+#load external file
+EXTERNAL_FILES=(
+	"$HOME/.bash_aliases"
+	"$HOME/.bash_variables"
+)
+for filename in ${EXTERNAL_FILES[@]}; do
+	if [ -f $filename ]; then
+		source "$filename"
+	fi
+done
 
 export EDITOR="vim"
 export VISUAL="vim"
