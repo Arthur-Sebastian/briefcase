@@ -17,3 +17,6 @@
 	path = .vim/pack/neoclide/start/coc.nvim
 	url = git@github.com:neoclide/coc.nvim
 	branch = release
+[submodule ".vim/pack/coder/start/claudecode.nvim"]
+	path = .vim/pack/coder/start/claudecode.nvim
+	url = git@github.com:coder/claudecode.nvim

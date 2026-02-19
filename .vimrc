@@ -31,6 +31,8 @@ nnoremap ;<Left> <C-o>
 autocmd BufWritePre * :call CocAction('runCommand', 'prettier.formatFile')
 " - quick symbol rename
 nnoremap <F2> :call CocActionAsync('rename')<CR>
+" - escape terminal
+tnoremap <C-q> <C-\><C-n><C-w><C-w>
 
 set updatetime=300
 
@@ -77,3 +79,23 @@ let g:airline#extensions#tabline#formatter='unique_tail'
 "	au!
 "	au vimenter * :Lex
 "aug end
+
+" claudecode.nvim configuration
+lua << EOF
+require('claudecode').setup({
+  auto_start = true  -- Automatically start WebSocket server when Neovim starts
+})
+EOF
+
+" claudecode.nvim key mappings
+" AI/Claude Code prefix
+nnoremap ;ac :ClaudeCode<CR>
+nnoremap ;af :ClaudeCodeFocus<CR>
+nnoremap ;ar :ClaudeCode --resume<CR>
+nnoremap ;aC :ClaudeCode --continue<CR>
+nnoremap ;am :ClaudeCodeSelectModel<CR>
+nnoremap ;ab :ClaudeCodeAdd %<CR>
+vnoremap ;as :ClaudeCodeSend<CR>
+" Diff management
+nnoremap ;aa :ClaudeCodeDiffAccept<CR>
+nnoremap ;ad :ClaudeCodeDiffDeny<CR>
